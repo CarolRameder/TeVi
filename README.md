@@ -7,3 +7,6 @@ The CSV file which is parsed by the script that populates the MySQL database on 
   
 OpenAPI using Swagger: https://app.swaggerhub.com/apis-docs/TeVi/TeVi/1.0.0 </br>
 
+  PhpMyAdmin was used for the attacks database and by using this tool we make RESTful operations like get, post, put and delete .    
+  AJAX techniques were used in order to connect the front-end to the back-end in an asynchronous mode,
+  as it is not necesary to refresh the page in order to view the charts from your enquiry . 
