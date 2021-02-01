@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="../util/css/admin_style.css">
+      <title>MyAdmin</title>
+   </head>
+   <body>
+       <h1>myTeViAdmin</h1>
+       <h2>Control panel for managing TeVi website database</h2>
+       <h2>Attacks Panel</h2>
+       <div id="attacks-panel">
+           
+            <div class="acolumns">
+                <h3>Insert</h3>
+                <label>Year</label>
+                <input id="iyear" class="inputAdmin" type="text">
+                <label>Month</label>
+                <input id="imonth" class="inputAdmin" type="text">
+                <label>Day</label>
+                <input id="iday" class="inputAdmin" type="text">
+                <label>Country</label>
+                <input id="country_txt" class="inputAdmin" type="text">
+                <label>City</label>
+                <input id="city" class="inputAdmin" type="text">
+                <label>Latitude</label>
+                <input id="latitude" class="inputAdmin"  type="text">
+                <label>Longitude</label>
+                <input id="longitude" class="inputAdmin" type="text">
+                <label>Success</label>
+                <input id="success" class="inputAdmin" type="text">
+                <label>Suicide</label>
+                <input id="suicide" class="inputAdmin" type="text">
+                <label>Attack type</label>
+                <input id="attacktype1_txt" class="inputAdmin" type="text">
+                <label>Target type</label>
+                <input id="targtype1_txt" class="inputAdmin" type="text">
+                <label>Weapon type</label>
+                <input id="weaptype1_txt" class="inputAdmin" type="text">
+                <button id="insert-attack" class="admButton">Insert</button>
+            </div>
+            <div class="acolumns">
+                <h3>Update</h3>
+                <label>Id</label>
+                <input id="uid" class="inputAdmin" type="text">
+                <button id="uget-attack" class="admButton">Get record</button>
+                <label>Year</label>
+                <input id="uiyear" class="inputAdmin" type="text">
+                <label>Month</label>
+                <input id="uimonth" class="inputAdmin" type="text">
+                <label>Day</label>
+                <input id="uiday" class="inputAdmin" type="text">
+                <label>Country</label>
+                <input id="ucountry_txt" class="inputAdmin" type="text">
+                <label>City</label>
+                <input id="ucity" class="inputAdmin" type="text">
+                <label>Latitude</label>
+                <input id="ulatitude" class="inputAdmin"  type="text">
+                <label>Longitude</label>
+                <input id="ulongitude" class="inputAdmin" type="text">
+                <label>Success</label>
+                <input id="usuccess" class="inputAdmin" type="text">
+                <label>Suicide</label>
+                <input id="usuicide" class="inputAdmin" type="text">
+                <label>Attack type</label>
+                <input id="uattacktype1_txt" class="inputAdmin" type="text">
+                <label>Target type</label>
+                <input id="utargtype1_txt" class="inputAdmin" type="text">
+                <label>Weapon type</label>
+                <input id="uweaptype1_txt" class="inputAdmin" type="text">
+                <button id="update-attack" class="admButton">Update</button>
+            </div>
+            <div class="acolumns">
+                <h3>Delete</h3>
+                <label>Id</label>
+                <input id="id" class="inputAdmin" type="text">
+                <button id="delete-attack" class="admButton">Delete</button>
+            </div>
+        </div>
+        <h2>Users Panel</h2>
+        <div id="users-panel">
+            
+            <div class="acolumns" >
+                <h3>Username</h3>
+                <input id="user" class="inputAdminUs" type="text">
+                <button id="del-user" class="admButton">Delete</button>
+                <button id="make-admin" class="admButton">Make admin</button>
+                <button id="unmake-admin" class="admButton">Make standard user</button>
+
+            </div>
+            
+        </div>
+
+        <script src="../util/js/form-ajax-admin.js"></script>
+   </body>
+</html>
