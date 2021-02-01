@@ -10,3 +10,7 @@ OpenAPI using Swagger: https://app.swaggerhub.com/apis-docs/TeVi/TeVi/1.0.0 </br
   PhpMyAdmin was used for the attacks database and by using this tool we make RESTful operations like get, post, put and delete .    
   AJAX techniques were used in order to connect the front-end to the back-end in an asynchronous mode,
   as it is not necesary to refresh the page in order to view the charts from your enquiry . 
+Demo Video:
+
+Download version: https://drive.google.com/drive/folders/1is0xRE5x684Bt19cI6C8eh02vRUJTHzi?usp=sharing
+View mode: https://youtu.be/jv293dE7Bxo
