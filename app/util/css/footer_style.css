@@ -1,0 +1,43 @@
+ .mylogo{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom:20px;
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    border:2px solid black ;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+
+
+.mylogo:hover{
+    opacity: 0.5;
+    transition: 0.4s;
+}
+
+#copyr{
+    font-size:20px;
+    background-color: #a6a6a6;
+    margin-top:40px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #copyr{
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+    }
+    .mylogo {
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      width: 75px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid black;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+}

@@ -1,0 +1,118 @@
+#statisitcs-settings{
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.3);
+    width: 89%;
+    padding: 1%;
+    margin: 1%;
+    background-color:#d9d9d9;
+    border-radius: 5px;
+    align-self: center;
+    display: inline-block;
+      
+}
+ .stt-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+ }
+.statistics-filters{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#statistics-form{
+    text-align: center;
+}
+
+.statistics-column {
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    background-color:#d9d9d9;
+    border-radius: 5px;
+}
+
+#year_l1{
+    width: 30%;
+}
+#year_h1{
+    width: 30%;
+}
+#year_l{
+    width: 30%;
+}
+#year_h{
+    width: 30%;
+}
+label {
+    font-family: Coldiac, serif;
+    font-size: large;
+    margin: 2%;
+}
+.inp-field {
+    font-family: Coldiaf, serif;
+    font-size: 23px;
+    margin-bottom: 2%;
+    width: 70%;
+    align-self: center;
+    height: 15%;
+    cursor: pointer;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 2px solid gray;
+    color: black;
+    padding: 10px;
+    padding-right: 38px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.time-interval{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 78%;
+    align-self: center;
+    
+}
+.setButton {
+    text-transform: uppercase;
+    font-weight: bold;
+color: white;
+background:#997300;;
+position: relative;
+margin-top:20px;
+width:50%;
+height: 45px;
+border-radius: 10px;
+}
+.setButton:hover {
+    background:black;
+    width:30%;
+    transition: 0.4s;
+}
+@media screen and (max-width: 750px) {
+    .statistics-filters{
+        width: 95%;
+      display: block;
+    }
+    .statistics-column{
+        float: none;
+        width: 95%;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    #statisitcs-settings{
+        width: 90%;
+       
+    }
+}

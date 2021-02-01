@@ -1,0 +1,389 @@
+swagger: "2.0"
+info:
+  description: "Browse a large database of information regarding terrorist attacks throughout time, including statistics, all in json format."
+  version: "1.0.0"
+  title: "Global Terrorism Visualiser"
+ 
+ 
+host: "localhost"
+basePath: "/tevi/api"
+tags:
+- name: "statistics"
+  description: "Multiple statistics based on different criteria"
+- name: "attacks"
+  description: "Manage data about terrorist attacks"
+- name: "account"
+  description: "Manage website accounts"
+
+ 
+schemes:
+- "http"
+paths:
+  /charts:
+    post:
+      tags:
+      - "statistics"
+      summary: "Statistics in format category : count"
+      description: "Given a certain table column and filtering parameters api returns the count of every distinct entry of that field"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed to compose the query"
+        required: true
+        schema:
+          type: object
+          properties:
+            column:
+              type: string
+            iyear_l:
+              type: integer
+            iyear_h:
+              type: integer
+            imonth:
+              type: string
+            iday:
+              type: string
+            country_txt:
+              type: string
+            city:
+              type: string
+            success:
+              type: string
+            suicide:
+              type: string
+            attackType1_txt:
+              type: string
+            targtype1_txt:
+              type: string
+            weaptype1_txt:
+              type: string
+          example:
+            column : weaptype1_txt
+            iyear_l : 1970
+            iyear_h : 2012
+            country_txt : France
+            success: 1
+            attackType1_txt: Bombing/Explosion 
+            
+
+      responses:
+        "204":
+          description: "No content"
+        "200":
+          description: "Ok"
+  
+      
+  /attacks/{country}:
+    get:
+      tags:
+      - "attacks"
+      summary: "All entries in the database relatad to given country"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "country"
+        in: "path"
+        description: "Name of the country you are interested in"
+        required: true
+        type: "string"
+      
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: object
+            properties:
+              iyear:
+                type: string
+              imonth:
+                type: string
+              i1day:
+                type: string
+              country_txt:
+                type: string
+              city:
+                type: string
+              latitude:
+                type: number
+              longitude:
+                type: number
+              success:
+                type: string
+              suicide:
+                type: string
+              attackType1_txt:
+                type: string
+              targtype1_txt:
+                type: string
+              weaptype1_txt:
+                type: string
+            example:
+              iyear: 1970
+              imonth: 5
+              i1day: 27
+              country_txt: France
+              city: Paris,
+              latitude: 48.856644,
+              longitude: 2.34233,
+              success: 0,
+              suicide: 0,
+              attacktype1_txt: Bombing/Explosion
+              targtype1_txt: Airports & Aircraft,
+              weaptype1_txt: Explosives
+
+        "204":
+          description: "No content"
+ 
+  
+  /attack/{id}:
+    delete:
+      tags:
+      - "attacks"
+      summary: "The attack with the specified id"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "id"
+        in: "path"
+        description: "Database id of desired attack"
+        required: true
+        type: "integer"
+      
+      responses:
+        "200":
+          description: "Attack inserted"
+         
+        "204":
+          description: "Invalid attack id"
+  
+  /attack:
+    put:
+      tags:
+      - "attacks"
+      summary: "Update an attack"
+      description: "Updates an attack given the id and the values of the columns that you want to modify"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed to update the attack"
+        required: true
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+            iyear:
+              type: integer
+            imonth:
+              type: string
+            iday:
+              type: string
+            country_txt:
+              type: string
+            city:
+              type: string
+            success:
+              type: string
+            suicide:
+              type: string
+            attackType1_txt:
+              type: string
+            targtype1_txt:
+              type: string
+            weaptype1_txt:
+              type: string
+          example:
+            id : 45
+            iyear : 2012
+            country_txt : France
+            success: 1
+            attackType1_txt: Bombing/Explosion 
+            
+
+      responses:
+        "400":
+          description: "Invalid attack id"
+        "200":
+          description: "Attack inserted"
+  /maps:
+    post:
+      tags:
+      - "statistics"
+      summary: "The coordinates of specific terrorism attacks"
+      description: "Given different attacks filters the api returns the coordinates of them"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed to compose the query"
+        required: true
+        schema:
+          type: object
+          properties:
+            iyear_l:
+              type: integer
+            iyear_h:
+              type: integer
+            imonth:
+              type: string
+            iday:
+              type: string
+            country_txt:
+              type: string
+            city:
+              type: string
+          example:
+            iyear_l : 1980
+            iyear_h : 1990
+            country_txt : Russia
+           
+ 
+      responses:
+        "204":
+          description: "No content"
+        "200":
+          description: "Ok"
+          schema:
+            type: object
+            properties:
+              title:
+                type: string
+              latitude:
+                type: number
+              longitude:
+                type: number
+              color:
+                type: string
+            example:
+              title: France
+              latitude: 46.2276
+              longitude: 2.2137
+              color: #997300
+     
+  
+  /logIn:
+    post:
+      tags:
+      - "account"
+      summary: "LogIn"
+      description: "Given an username and a name, a client tries to login."
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed to log in"
+        required: true
+        schema:
+          type: object
+          properties:
+            user:
+              type: string
+            password:
+              type: string
+          example:
+            user : mike
+            password : myPassword
+           
+ 
+      responses:
+        "204":
+          description: "No content"
+        "200":
+          description: "Ok"
+          schema:
+            type: object
+            properties:
+              userFound:
+                type: boolean
+              latitude:
+                type: number
+              name:
+                type: string
+            example:
+              userFound: 1
+              name: Tim
+              
+  /signUp:
+    post:
+      tags:
+      - "account"
+      summary: "SignUp"
+      description: "Given a name, an user and a password, a new account is inserted in the database"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed to insert an account into a database"
+        required: true
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            user:
+              type: string
+            password:
+              type: string
+          example:
+            name: Tim
+            user : mike
+            password : myPassword
+           
+ 
+      responses:
+        "400":
+          description: "username not unique"
+        "200":
+          description: "user inserted"
+          
+  /users:
+    put:
+      tags:
+      - "account"
+      summary: "Changing an user's privileges"
+      description: "Given an username, an admin can turn the account to an admin account or to a basic user account"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Parameters needed update the user"
+        required: true
+        schema:
+          type: object
+          properties:
+            isAdmin:
+              type: integer
+            user:
+              type: string
+          example:
+            isAdmin : 1
+            user : daniel21
+           
+ 
+      responses:
+        "400": 
+          description: "You must have admin privileges to modify database"
+        "204":
+          description: "Invalid username"
+        "200":
+          description: "User permissions updated"

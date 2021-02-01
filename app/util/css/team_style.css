@@ -1,0 +1,84 @@
+.profileImg{
+    border-radius: 50%;
+    width:50%;
+    margin-top: 20px;
+  }
+
+.socButton{
+    width: 10%;
+    margin-right: 10px;
+    margin-bottom: -30px;
+    margin-left: 10px;
+ }
+ 
+ .socButton:hover{
+    transform: scale(1.3);
+    transition: 0.4s;
+ }
+
+ .column {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin-left: 30px;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+  /* Add some shadows to create a card effect */
+  .card {
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.3);
+    background-color: #999999;
+    height: 500px;
+    border-radius: 5px;
+  }
+  
+  /* Some left and right padding inside the container */
+  .container {
+    padding: 0 16px;
+  }
+  
+  /* Clear floats */
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+ @media only screen and (max-width: 1000px) {
+    .row{
+        display: block;
+    }
+	.column {
+		width: 90%;
+		display: block;
+		margin-left: 0px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .profileImg {
+        border-radius: 50%;
+        width: 30%;
+        margin-top: 20px;
+    }
+    .socButton {
+        width: 7%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .card {
+		margin-bottom: 20px;
+    }
+    .socButton {
+        width: 12%;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .card{
+        height: 420px;
+    }
+}

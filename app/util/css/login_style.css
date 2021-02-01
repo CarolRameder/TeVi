@@ -1,0 +1,98 @@
+
+.logIn{
+    background-color: #d9d9d9;
+    color:black;
+    width:28%;
+    height:400px;
+    float:left;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4d4d4d;
+    border-radius: 5px;
+}
+.logIn:hover{
+    box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.signIn{
+	
+    background: #d9d9d9;
+    width:28%;
+    height:400px;
+    float:left;
+    margin-left: 50px;
+    font-weight: bold;
+    color: #4d4d4d;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.signIn:hover{
+    box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+ #failedLogin{
+color: red;
+}
+
+.logInput {
+    display: block;
+    margin-top: 10px; 
+  border: 1px solid #737373;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+	background-color: #cccccc;
+    width: 70%;
+}
+.logInput:focus{
+    background-color: #e6f3f8;
+    border: 3px solid #555;
+}
+#topfield{
+    margin-top: 30px;
+}
+.logButton {
+    text-transform: uppercase;
+    font-weight: bold;
+color: white;
+background:#997300;;
+position: relative;
+margin-top:20px;
+width:70%;
+height: 45px;
+border-radius: 10px;
+}
+
+.logButton:hover {
+    background:black;
+    width:30%;
+    transition: 0.4s;
+}
+
+#wrong{
+    visibility: hidden;
+    font-size: 80%;
+    color: red;
+}
+
+@media screen and (max-width: 750px) {
+    .flexbox {
+		width: 100%;
+		display: block;
+		margin-right: 0px;
+	}
+	.logIn {
+		float: none;
+		width: 80%;
+		margin: auto;
+	}
+	.signIn {
+		float: none;
+		width: 80%;
+		margin-left: 0px;
+		margin: auto;
+    }
+}

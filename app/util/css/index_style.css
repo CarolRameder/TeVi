@@ -1,0 +1,324 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Coldiac';
+    src: url('../resources/fonts/Coldiac.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    z-index: 11;
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+}
+
+.containerNav{
+    width: 95%;
+    margin: 0 auto;
+    
+}
+.llogo{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transform: scale(1.75);
+    width: 60px;
+    float: left;
+}
+
+.logo_div{
+    margin-left: 80px;
+    line-height: 4em;
+}
+
+.meniu li a{
+
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.meniu li a:hover{
+    color: #997300;
+    transition: 0.4s;
+}
+
+.meniu{
+    float:right;
+    
+}
+
+#adminLI{
+    display: none;
+}
+
+.meniu li{
+float: left;
+line-height: 70px;
+text-align: center;
+list-style: none;
+align-items: center;
+margin-left: -10px;
+margin-right: -10px;
+}
+
+
+.sections{
+    width: 100%;
+    position: relative;
+}
+
+
+.sections::after{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    content: '';
+}
+
+#head{
+    padding-bottom: 150px;
+    background-image: url('../resources/images/main_cover2.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    z-index: 10;
+
+}
+#section1{
+    background: #4d4d4d;
+    z-index: 9;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#section2{
+    background: darkgray;
+    z-index: 8;
+}
+#section3{
+    background: #4d4d4d;
+    z-index: 7;
+}
+#section4{
+    background:  #4d4d4d;
+    z-index: 6;
+    margin-bottom: 250px;
+}
+
+#section5{
+    background: darkgray;
+    z-index: 5;
+}
+
+#head:after,
+#section1:after,
+#section3:after{
+    transform-origin: left bottom;
+    transform: skewY(2deg);
+}
+#section2:after{
+    transform-origin: right bottom;
+    transform: skewY(-2deg);
+}
+.title-content{
+    font-family: Coldiac, serif;
+    color: lightgray;
+    padding-top: 0;
+    padding-bottom: 200px;
+    overflow: hidden;
+    display: block;
+    height: auto;
+}
+.title-content h1{
+    font-size: 472%;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 0;
+}
+.title-content h2{
+    position: relative;
+    color: lightgray;
+    font-size: 103%;
+    margin-left: 5%;
+}
+
+.content{
+    text-align: center;
+    padding: 200px 50px;
+    overflow: hidden;
+    display: block;
+    height: auto;
+
+}
+#chartdiv {
+	width: 100%;
+	height: auto;
+}
+
+#teamsParent {text-align: center;}
+
+.topText{
+    color: #997300;;
+    font-family: "Coldiac", cursive, sans-serif;
+    font-size: 20px;
+    margin-top:20px;
+    margin-bottom: 50px;
+}
+
+
+hr{
+width: 70%;
+position: relative;
+top:-4px;
+}
+ 
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+.footer{
+    background-color: #a6a6a6;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+    height:250px;
+    justify-content: center;
+    align-items: center;
+}
+#nav1{
+    color: #d9d9d9; ;
+}
+
+#nav2{
+    color: #d9d9d9; ;
+}
+#nav3{
+    color: #d9d9d9;
+}
+#statistic-title {
+    color: #d9d9d9;
+}
+.titles{
+    text-decoration: wavy;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Coldiac';
+    font-size: 60px;
+    margin-top: -50px;
+    margin-bottom: 100px;
+    font-style: oblique;
+ }
+@media only screen and (max-width: 600px) {
+    .titles {
+        font-size: 50px;
+    }
+    
+}
+@media only screen and (max-width: 1000px) {
+	.meniu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+	}
+	.containerNav {
+		width: 100%;
+    }
+    .row{
+        display: block;
+    }
+	.column {
+		width: 90%;
+		display: block;
+		margin-left: 0px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    #profileImg {
+        border-radius: 50%;
+        width: 30%;
+        margin-top: 20px;
+    }
+    #socButton {
+        width: 7%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+	.llogo {
+		visibility: collapse;
+		width: 0%;
+    }
+    .meniu {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .containerNav {
+		width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .meniu{
+        display: block;
+    }
+    ul.meniu li {
+		display: block;
+		padding: 0px;
+		display: block;
+		font-size: 1em;
+		line-height: 15px;
+		width: 100%;
+		margin-top: 3px;
+		margin-bottom: 4px;
+	}
+	.containerNav{
+		margin-top: 10px;
+	}
+	.navbar {
+        height: 130px;
+        position: relative;
+    }
+    .title-content h1 {
+        font-size: 230%;
+       margin-top: 100px;
+    }
+    .title-content h2 {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .title-content h1 {
+        font-size: 300%;
+       margin-top: 100px;
+    }
+    .title-content h2 {
+        width: 60%;
+    }
+}

@@ -1,0 +1,59 @@
+#aboutPoem{
+    font-style: italic;
+    font-size: large;
+    margin-bottom: 50px;
+    text-align:right;
+}
+.docs{
+    display: flex;
+    justify-content: center;
+}
+
+.docbtn{
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background:#997300;
+    margin-top:20px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.docbtn:hover{
+transform: scale(1.15);
+transition: 0.4s;
+background: black;
+box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.5);
+}
+#about{
+    font-family: Coldiac, serif;
+}
+
+#aboutDetails{
+    margin-top:50px;
+    overflow-y: scroll;
+    height:100px;
+    text-align: left;
+    margin-bottom: 50px;
+    
+}
+#aboutDetails:hover{
+    box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+#aboutLine{
+margin-left: 40%;
+
+}
+
+#aboutLine2{
+    margin-right: 40%;
+}
+
+.aboutLine1{
+    margin-right:10%;
+}
